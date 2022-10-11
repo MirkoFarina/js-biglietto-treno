@@ -19,14 +19,14 @@ if (etaPasseggero >= 18 && etaPasseggero <= 65) {
   prezzoFinale = prezzoScontato.toFixed(2);
 
   document.getElementById("prezzo-intero").innerHTML = `
-${prezzoBiglietto}&euro;
+${prezzoBiglietto.toFixed(2)}&euro;
 `;
 }else {
   scontoApplicato = prezzoBiglietto * scontoOver65 ;
   prezzoScontato = prezzoBiglietto - scontoApplicato ;
   prezzoFinale = prezzoScontato.toFixed(2);
   document.getElementById("prezzo-intero").innerHTML = `
-${prezzoBiglietto}&euro;
+${prezzoBiglietto.toFixed(2)}&euro;
 `;
 }
 
