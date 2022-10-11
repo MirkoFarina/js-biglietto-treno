@@ -13,35 +13,26 @@ let prezzoFinale;
 if (etaPasseggero >= 18 && etaPasseggero <= 65) {
   prezzoFinale = prezzoBiglietto.toFixed(2);
 
-  document.getElementById("prezzo-finale").innerHTML = `
-  ${prezzoFinale}&euro;
-`;
 }else if (etaPasseggero < 18) {
   scontoApplicato = prezzoBiglietto * scontoMinorenni ;
   prezzoScontato = prezzoBiglietto - scontoApplicato ;
   prezzoFinale = prezzoScontato.toFixed(2);
 
   document.getElementById("prezzo-intero").innerHTML = `
-  ${prezzoBiglietto}&euro;
+${prezzoBiglietto}&euro;
 `;
-
-  document.getElementById("prezzo-finale").innerHTML = `
-  ${prezzoFinale}&euro;
-`;
-
 }else {
   scontoApplicato = prezzoBiglietto * scontoOver65 ;
   prezzoScontato = prezzoBiglietto - scontoApplicato ;
   prezzoFinale = prezzoScontato.toFixed(2);
-
   document.getElementById("prezzo-intero").innerHTML = `
-  ${prezzoBiglietto}&euro;
-`;
-
-  document.getElementById("prezzo-finale").innerHTML = `
-  ${prezzoFinale}&euro;
+${prezzoBiglietto}&euro;
 `;
 }
+
+document.getElementById("prezzo-finale").innerHTML = `
+${prezzoFinale}&euro;
+`;
 
 //stampa descrizione
 document.getElementById("descrizione").innerHTML = `
